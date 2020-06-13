@@ -5,8 +5,8 @@
 - develop a mental model like a summary of the entire problem, the what and not the how yet
 
 # Examples/Test Cases
-come up with actual examples that validate our understanding and confirm we are going in the right direction
-also provide edge cases, like if iterating over numbers, the edge cases may be the ends of the range of numbers, typical edge cases involve negatives or zero
+-come up with actual examples that validate our understanding and confirm we are going in the right direction
+-also provide edge cases, like if iterating over numbers, the edge cases may be the ends of the range of numbers, typical edge cases involve negatives or zero
 
 # Data Structure
 determine what data structure you can work with to convert input to output
