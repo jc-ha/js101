@@ -1,8 +1,8 @@
 # Understand the Problem
-read problem carefully, don’t miss details
-identify inputs and outputs, make the requirements explicit and identify implicit requirements
-answer clarifying questions
-develop a mental model like a summary of the entire problem, the what and not the how yet
+- read problem carefully, don’t miss details
+- identify inputs and outputs, make the requirements explicit and identify implicit requirements
+- answer clarifying questions
+- develop a mental model like a summary of the entire problem, the what and not the how yet
 
 # Examples/Test Cases
 come up with actual examples that validate our understanding and confirm we are going in the right direction
