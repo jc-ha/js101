@@ -25,13 +25,13 @@ Negative integers? */
 let rlSync = require('readline-sync');
 console.log('Please enter limits for odd numbers logged.');
 
-let num1 = Number(rlSync.question('First number: '));
+let num1 = Number(rlSync.question('First number please: '));
 while (Number.isNaN(num1)) {
-  num1 = Number(rlSync.question('Not a number. Try again: '));
+  num1 = Number(rlSync.question('Not a number - please try again: '));
 }
-let num2 = Number(rlSync.question('Second number: '));
+let num2 = Number(rlSync.question('Second number please: '));
 while (Number.isNaN(num2)) {
-  num2 = Number(rlSync.question('Not a number. Try again: '));
+  num2 = Number(rlSync.question('Not a number - please try again: '));
 }
 
 function oddNumbers(num1, num2) {
