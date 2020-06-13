@@ -5,23 +5,23 @@
 - develop a mental model like a summary of the entire problem, the what and not the how yet
 
 # Examples/Test Cases
--come up with actual examples that validate our understanding and confirm we are going in the right direction
--also provide edge cases, like if iterating over numbers, the edge cases may be the ends of the range of numbers, typical edge cases involve negatives or zero
+- come up with actual examples that validate our understanding and confirm we are going in the right direction
+- also provide edge cases, like if iterating over numbers, the edge cases may be the ends of the range of numbers, typical edge cases involve negatives or zero
 
 # Data Structure
-determine what data structure you can work with to convert input to output
-the data structure chosen will influence algorithm used, so Data Structure and Algorithm are often paired together
+- determine what data structure you can work with to convert input to output
+- the data structure chosen will influence algorithm used, so Data Structure and Algorithm are often paired together
 
 # Algorithm
-series of instructions that transform input to output, enough detail and readily converted to code but not actual code
-if it was in a programming language, you lose flexibility during implementation, programming languages often provide multiple ways to achieve something, so making implementation choices too soon is not ideal
-also not uncommon to change the algorithm once coding starts, don’t feel constrained
-test algorithm manually to test cases
-is this where we write pseudocode? 
+- series of instructions that transform input to output, enough detail and readily converted to code but not actual code
+- if it was in a programming language, you lose flexibility during implementation, programming languages often provide multiple ways to achieve something, so making implementation choices too soon is not ideal
+- also not uncommon to change the algorithm once coding starts, don’t feel constrained
+- test algorithm manually to test cases
+- is this where we write pseudocode? 
 
 # Code with Intent
-implement solution in programming language
-don’t be alarmed if you have to circle back to algorithm
+- implement solution in programming language
+- don’t be alarmed if you have to circle back to algorithm
 
 
 # Pseudocode practice
