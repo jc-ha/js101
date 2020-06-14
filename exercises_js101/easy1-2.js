@@ -1,3 +1,5 @@
+// easy1-2.js
+
 /* Problem
 input:
 output: log all odd numbers between 1-99, including ends

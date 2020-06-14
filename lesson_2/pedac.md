@@ -1,3 +1,5 @@
+# PEDAC
+
 # Understand the Problem
 - read problem carefully, don’t miss details
 - identify inputs and outputs, make the requirements explicit and identify implicit requirements

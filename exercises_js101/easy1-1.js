@@ -1,3 +1,5 @@
+// easy1-1.js
+
 /* Problem
 input: one positive/negative/zero integer
 output: boolean, true if absolute value is odd
