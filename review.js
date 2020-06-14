@@ -1,4 +1,4 @@
-/** Test Code */
+// review.js
 
 let number = 5;
 
@@ -14,3 +14,14 @@ console.log(number); // 5
  * the number variable by creating a separate and independent
  * variable with the same name, but with the scope limited to the
  * function. Check exercise 8, Objects chapter in js100 book. */
+
+// question below
+
+let list = [1, 2, 3, 4, 5, 6, 7];
+
+list.forEach(element => {
+  console.log(list.shift());
+}); // why does this stop after 4 elements?
+
+console.log(list); // this shows 5, 6, 7 left in array
+
