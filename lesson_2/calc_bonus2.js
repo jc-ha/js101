@@ -13,7 +13,8 @@ use a loop with a that checks if answer is y and keeps running
 affirmative 
 make functions out of much of the code to keep while simple */
 
-const rlSync = require('readline-sync');
+let rlSync = require('readline-sync');
+let jsonMsg = require('./calculator_messages.json');
 
 function prompt(message) {
   console.log(`=> ${message}`);
@@ -24,28 +25,28 @@ function invalidNum(num) {
 }
 
 function firstNum() {
-  prompt('What\'s the first number?');
+  prompt(jsonMsg.firstQuestion);
   num1 = rlSync.question();
   while (invalidNum(num1)) {
-    prompt('That doesn\'t look like a valid number.');
+    prompt(jsonMsg.validNumber);
     num1 = rlSync.question();
   }
 }
 
 function secondNum() {
-  prompt('What\'s the second number?');
+  prompt(jsonMsg.secondQuestion);
   num2 = rlSync.question();
   while (invalidNum(num2)) {
-    prompt('That doesn\'t look like a valid number.');
+    prompt(jsonMsg.validNumber);
     num2 = rlSync.question();
   }
 }
 
 function getOperation() {
-  prompt('What operation would like to perform?\n1) + 2) - 3) * 4) /');
+  prompt(jsonMsg.chooseOperation);
   operation = rlSync.question();
   while (!['1', '2', '3', '4'].includes(operation)) {
-    prompt('Must choose 1, 2, 3, or 4');
+    prompt(jsonMsg.validOperation);
     operation = rlSync.question();
   }
 }
@@ -69,11 +70,11 @@ function calculate() {
 }
 
 function repeatCalc() {
-  prompt('Do you want to perform another calculation? (y/n)');
+  prompt(jsonMsg.askRepeat);
   calcAgain = rlSync.question();
 }
 
-prompt('Welcome to Calculator!');
+prompt(jsonMsg.welcome);
 let num1;
 let num2;
 let operation;

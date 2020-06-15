@@ -1,0 +1,9 @@
+{
+  "firstQuestion" : "What's the first number?",
+  "validNumber" : "That doesn't look like a valid number.",
+  "secondQuestion" : "What's the second number?",
+  "chooseOperation" : "What operation would like to perform?\n1) + 2) - 3) * 4) /",
+  "validOperation" : "Must choose 1, 2, 3, or 4",
+  "askRepeat" : "Do you want to perform another calculation? (y/n)",
+  "welcome" : "Welcome to Calculator!"
+}
