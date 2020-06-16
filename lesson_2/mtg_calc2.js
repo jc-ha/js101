@@ -22,7 +22,7 @@ function getPrincipal() {
 }
 
 function getMonthlyIntRate() {
-  console.log('Please enter your interest rate, e.g., 4 for 4%.');
+  console.log('Please enter your interest rate, e.g., 3.8 for 3.8%.');
   let interestRate = rlSync.question();
   while (invalidNum(interestRate)) {
     console.log('Please enter a valid number.');
