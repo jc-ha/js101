@@ -1,5 +1,4 @@
 let rlSync = require('readline-sync');
-let jsonMsg = require('./calculator_messages.json');
 let num1;
 let num2;
 let operation;
@@ -8,7 +7,7 @@ let calcAgain;
 let language;
 
 function prompt(keyMessage) {
-  let message = jsonMsg[language][keyMessage];
+  let message = require('./calculator_messages.json')[language][keyMessage];
   console.log(`=> ${message}`);
 }
 
@@ -67,7 +66,8 @@ function calculate() {
       output = Number(num1) / Number(num2);
       break;
   }
-  prompt(`The result is ${output}.`);
+  prompt('result');
+  console.log(output);
 }
 
 function repeatCalc() {
@@ -80,18 +80,12 @@ function repeatCalc() {
 }
 
 chooseLang();
-prompt('welcome');
 do {
+  console.clear();
+  prompt('welcome');
   firstNum();
   secondNum();
   getOperation();
   calculate();
   repeatCalc();
 } while (calcAgain === 'y');
-
-/*
-while (true) {
-  // code omitted for brevity
-
-  if (answer[0].toLowerCase() !== 'y') break;
-}*/

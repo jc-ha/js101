@@ -7,7 +7,7 @@
     "validOperation" : "Must choose 1, 2, 3, or 4",
     "askRepeat" : "Do you want to perform another calculation? (y/n)",
     "validRepeat" : "Please enter y for yes or n for no.",
-    "welcome" : "Welcome to Calculator!"
+    "welcome" : "Welcome to Calculator!",
     "result" : "Result: "
   },
   "es" : {
@@ -18,7 +18,7 @@
     "validOperation" : "Pretend Spanish: Must choose 1, 2, 3, or 4",
     "askRepeat" : "Pretend Spanish: Do you want to perform another calculation? (y/n)",
     "validRepeat" : "Pretend Spanish: Please enter y for yes or n for no.",
-    "welcome" : "Pretend Spanish: Welcome to Calculator!"
+    "welcome" : "Pretend Spanish: Welcome to Calculator!",
     "result" : "Pretend Spanish: Result: "
   }
 }
