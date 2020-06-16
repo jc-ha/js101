@@ -1,20 +1,10 @@
-/* Assignment: Calculator Bonus 1
-Problem
-ask user if they'd like to run another calculation
-input: y/n
-output: another run of code
-just need to be able to repeat the code again if they answer y
-Example
-y
-Data Structure
-Just a string y or n
-Algorithm
-use a loop with a that checks if answer is y and keeps running 
-affirmative 
-make functions out of much of the code to keep while simple */
-
 let rlSync = require('readline-sync');
 let jsonMsg = require('./calculator_messages.json');
+let num1;
+let num2;
+let operation;
+let output;
+let calcAgain;
 
 function prompt(message) {
   console.log(`=> ${message}`);
@@ -75,12 +65,6 @@ function repeatCalc() {
 }
 
 prompt(jsonMsg.welcome);
-let num1;
-let num2;
-let operation;
-let output;
-let calcAgain;
-
 do {
   firstNum();
   secondNum();
