@@ -1,9 +1,24 @@
 {
-  "firstQuestion" : "What's the first number?",
-  "validNumber" : "That doesn't look like a valid number.",
-  "secondQuestion" : "What's the second number?",
-  "chooseOperation" : "What operation would like to perform?\n1) + 2) - 3) * 4) /",
-  "validOperation" : "Must choose 1, 2, 3, or 4",
-  "askRepeat" : "Do you want to perform another calculation? (y/n)",
-  "welcome" : "Welcome to Calculator!"
+  "en" : {
+    "firstQuestion" : "What's the first number?",
+    "validNumber" : "That doesn't look like a valid number.",
+    "secondQuestion" : "What's the second number?",
+    "chooseOperation" : "What operation would like to perform?\n1) + 2) - 3) * 4) /",
+    "validOperation" : "Must choose 1, 2, 3, or 4",
+    "askRepeat" : "Do you want to perform another calculation? (y/n)",
+    "validRepeat" : "Please enter y for yes or n for no.",
+    "welcome" : "Welcome to Calculator!"
+    "result" : "Result: "
+  },
+  "es" : {
+    "firstQuestion" : "Pretend Spanish: What's the first number?",
+    "validNumber" : "Pretend Spanish: That doesn't look like a valid number.",
+    "secondQuestion" : "Pretend Spanish: What's the second number?",
+    "chooseOperation" : "Pretend Spanish: What operation would like to perform?\n1) + 2) - 3) * 4) /",
+    "validOperation" : "Pretend Spanish: Must choose 1, 2, 3, or 4",
+    "askRepeat" : "Pretend Spanish: Do you want to perform another calculation? (y/n)",
+    "validRepeat" : "Pretend Spanish: Please enter y for yes or n for no.",
+    "welcome" : "Pretend Spanish: Welcome to Calculator!"
+    "result" : "Pretend Spanish: Result: "
+  }
 }

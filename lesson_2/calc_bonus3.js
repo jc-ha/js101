@@ -5,8 +5,10 @@ let num2;
 let operation;
 let output;
 let calcAgain;
+let language;
 
-function prompt(message) {
+function prompt(keyMessage) {
+  let message = jsonMsg[language][keyMessage];
   console.log(`=> ${message}`);
 }
 
@@ -14,29 +16,38 @@ function invalidNum(num) {
   return num.trimStart() === '' || Number.isNaN(Number(num));
 }
 
+function chooseLang() {
+  console.log('English or Espanol?\nen - English  es - Espanol');
+  language = rlSync.question();
+  while (!['en', 'es'].includes(language)) {
+    console.log('en - English, es - Espanol.');
+    language = rlSync.question();
+  }
+}
+
 function firstNum() {
-  prompt(jsonMsg.firstQuestion);
+  prompt('firstQuestion');
   num1 = rlSync.question();
   while (invalidNum(num1)) {
-    prompt(jsonMsg.validNumber);
+    prompt('validNumber');
     num1 = rlSync.question();
   }
 }
 
 function secondNum() {
-  prompt(jsonMsg.secondQuestion);
+  prompt('secondQuestion');
   num2 = rlSync.question();
   while (invalidNum(num2)) {
-    prompt(jsonMsg.validNumber);
+    prompt('validNumber');
     num2 = rlSync.question();
   }
 }
 
 function getOperation() {
-  prompt(jsonMsg.chooseOperation);
+  prompt('chooseOperation');
   operation = rlSync.question();
   while (!['1', '2', '3', '4'].includes(operation)) {
-    prompt(jsonMsg.validOperation);
+    prompt('validOperation');
     operation = rlSync.question();
   }
 }
@@ -60,15 +71,27 @@ function calculate() {
 }
 
 function repeatCalc() {
-  prompt(jsonMsg.askRepeat);
-  calcAgain = rlSync.question();
+  prompt('askRepeat');
+  calcAgain = rlSync.question().toLowerCase();
+  while (!['y', 'n'].includes(calcAgain)) {
+    prompt('validRepeat');
+    calcAgain = rlSync.question().toLowerCase();
+  }
 }
 
-prompt(jsonMsg.welcome);
+chooseLang();
+prompt('welcome');
 do {
   firstNum();
   secondNum();
   getOperation();
   calculate();
   repeatCalc();
-} while (calcAgain[0].toLowerCase() === 'y');
+} while (calcAgain === 'y');
+
+/*
+while (true) {
+  // code omitted for brevity
+
+  if (answer[0].toLowerCase() !== 'y') break;
+}*/

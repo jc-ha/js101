@@ -56,6 +56,10 @@ function getMtgPayment() {
 function repeatCalc() {
   console.log('Would you like to perform another calculation? (y/n)');
   calcAgain = rlSync.question().toLowerCase();
+  while (!['y', 'n'].includes(calcAgain)) {
+    console.log('Please enter y for yes or n for no.');
+    calcAgain = rlSync.question().toLowerCase();
+  }
 }
 
 do {
