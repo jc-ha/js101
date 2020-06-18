@@ -1,29 +1,5 @@
 // easy1-2.js
 
-/* Problem
-input:
-output: log all odd numbers between 1-99, including ends
-log on separate lines
-start counting from 1 to 99 and log any odd number
-
-Examples
-O: 1, 3, 5, 7, 9
-
-Data Structure
-Just counting up in increments
-
-Algorithm
-1. Set i = 1 and check that it is less than 100
-2. If yes, go on, if no, stop
-  1. Check if i is an odd number
-  2. If yes, go on, if no, increment i and go back to loop
-    1. Log i, increment i, go back to loop
-
-Further Exploration
-Ask for input on limits of numbers
-Save those inputs and use them as arg for function
-Negative integers? */
-
 let rlSync = require('readline-sync');
 console.log('Please enter limits for odd numbers logged.');
 
