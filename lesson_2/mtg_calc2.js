@@ -6,12 +6,12 @@ let mtgPayment;
 let calcAgain;
 
 function invalidNum(num) {
-  return num.trimStart() === '' ||
+  return num.trim() === '' ||
          Number.isNaN(Number(num)) ||
          Number(num) < 0;
 }
 
-function getPrincipal() {
+function updatePrincipal() {
   console.log('Please enter your loan amount, e.g., 200000 for $200,000.');
   let loanAmount = rlSync.question();
   while (invalidNum(loanAmount)) {
@@ -65,7 +65,7 @@ function repeatCalc() {
 do {
   console.clear();
   console.log('Welcome to Mortgage Calculator\n * * * * *');
-  getPrincipal();
+  updatePrincipal();
   getMonthlyIntRate();
   getDurationMonths();
   getMtgPayment();
