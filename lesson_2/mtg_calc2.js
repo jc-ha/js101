@@ -1,3 +1,4 @@
+// Define variables and functions
 let rlSync = require('readline-sync');
 let principal;
 let monthlyIntRate;
@@ -61,6 +62,7 @@ function updateCalcAgain() {
   }
 }
 
+// Start prog
 do {
   console.clear();
   console.log('Welcome to Mortgage Calculator\n * * * * *');
