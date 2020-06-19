@@ -21,7 +21,7 @@ function updatePrincipal() {
   principal = parseFloat(loanAmount);
 }
 
-function getMonthlyIntRate() {
+function updateMonthlyIntRate() {
   console.log('Please enter your interest rate, e.g., 3.8 for 3.8%.');
   let interestRate = rlSync.question();
   while (invalidNum(interestRate)) {
@@ -31,7 +31,7 @@ function getMonthlyIntRate() {
   monthlyIntRate = (parseFloat(interestRate) / 100) / 12;
 }
 
-function getDurationMonths() {
+function updateDurationMonths() {
   console.log('Please enter your loan duration, e.g., 30 for 30 years.');
   let durationYears = rlSync.question();
   while (invalidNum(durationYears)) {
@@ -41,7 +41,7 @@ function getDurationMonths() {
   durationMonths = parseFloat(durationYears) * 12;
 }
 
-function getMtgPayment() {
+function updateMtgPayment() {
   if (durationMonths === 0) {
     mtgPayment = principal;
   } else if (monthlyIntRate === 0) {
@@ -50,10 +50,9 @@ function getMtgPayment() {
     mtgPayment = principal * (monthlyIntRate /
     (1 - Math.pow((1 + monthlyIntRate), (-durationMonths))));
   }
-  console.log(`Your monthly mortgage payment is $${mtgPayment.toFixed(2)}.`);
 }
 
-function repeatCalc() {
+function updateCalcAgain() {
   console.log('Would you like to perform another calculation? (y/n)');
   calcAgain = rlSync.question().toLowerCase();
   while (!['y', 'n'].includes(calcAgain)) {
@@ -66,8 +65,9 @@ do {
   console.clear();
   console.log('Welcome to Mortgage Calculator\n * * * * *');
   updatePrincipal();
-  getMonthlyIntRate();
-  getDurationMonths();
-  getMtgPayment();
-  repeatCalc();
+  updateMonthlyIntRate();
+  updateDurationMonths();
+  updateMtgPayment();
+  console.log(`Your monthly mortgage payment is $${mtgPayment.toFixed(2)}.`);
+  updateCalcAgain();
 } while (calcAgain === 'y');
