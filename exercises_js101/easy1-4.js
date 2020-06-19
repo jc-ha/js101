@@ -1,5 +1,6 @@
 // easy1-4.js
 
+console.clear();
 let rlSync = require('readline-sync');
 const SQM_TO_SQFT = 10.7639;
 let areaInM;
