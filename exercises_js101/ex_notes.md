@@ -77,6 +77,41 @@ Log both values
   Further Exploration
 Run code to determine which measurement the inputs are in
 
+# easy1-5
+
+  Problem
+inputs: bill amount, tip rate in percentage
+outputs: log tip amount, total amount 
+tip rate will be entered as percentage, must convert it to decimal
+get the inputs and calculate the tip and then add it to the bill 
+amount and log tip and total
+cannot receive negative numbers or non-numeric values
+  Examples
+bill = 55, tip = 20
+tip = 11, total = 66
+bill = 10, tip = 0
+tip = 0, total = 10
+  Data Structure
+Numbers received, do a validation even though problems assumes
+  Algorithm
+Ask for inputs and assign them to variables
+Calculate the decimal of the tip rate
+Calculate the tip and assign it to variable
+Add tip to bill amount and log both
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
