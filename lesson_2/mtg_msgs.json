@@ -1,0 +1,11 @@
+{
+  "amountQuestion" : "Please enter your loan amount, e.g., 200000 for $200,000.",
+  "invalidamountQuestion" : "Please enter a valid number.",
+  "intQuestion" : "Please enter your interest rate, e.g., 3.8 for 3.8%.",
+  "invalidintQuestion" : "Please enter a valid number.",
+  "durationQuestion" : "Please enter your loan duration as an integer, e.g., 30 for 30 years.",
+  "invaliddurationQuestion" : "Please enter a valid integer.",
+  "againQuestion" : "Would you like to perform another calculation? (y/n)",
+  "invalidagainQuestion" : "Please enter \"y\" for yes or \"n\" for no.",
+  "welcome" : "Welcome to Mortgage Calculator\n * * * * *"
+}
