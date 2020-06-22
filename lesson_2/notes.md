@@ -39,3 +39,24 @@ Algorithm
   2. If interest is normal, 
 4. Output m
 let m = p * (j / (1 - Math.pow((1 + j), (-n)))); // monthly payment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

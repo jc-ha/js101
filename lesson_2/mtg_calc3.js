@@ -1,11 +1,6 @@
 // Define variables and functions
 const READLINE = require('readline-sync');
 const MESSAGES = require('./mtg_msgs.json');
-let principal;
-let monthlyIntRate;
-let durationMonths;
-let mtgPayment;
-let calcAgain;
 
 function invalidNum(num) {
   return num.trim() === '' ||
@@ -35,27 +30,28 @@ function getInput(inputType, invalidInput) {
   return input;
 }
 
-function getMtgPayment() {
+function getMtgPayment(duration, loan, interest) {
   let mortgage;
-  if (durationMonths === 0) {
-    mortgage = principal;
-  } else if (monthlyIntRate === 0) {
-    mortgage = principal / durationMonths;
+  if (duration === 0) {
+    mortgage = loan;
+  } else if (interest === 0) {
+    mortgage = loan / duration;
   } else {
-    mortgage = principal * (monthlyIntRate /
-    (1 - Math.pow((1 + monthlyIntRate), (-durationMonths))));
+    mortgage = loan * (interest /
+    (1 - Math.pow((1 + interest), (-duration))));
   }
   return mortgage;
 }
 
 // Start prog
+let calcAgain;
 do {
   console.clear();
   console.log(MESSAGES['welcome']);
-  principal = Number(getInput('amountQuestion', invalidNum));
-  monthlyIntRate = (Number(getInput('intQuestion', invalidNum)) / 100) / 12;
-  durationMonths = Number(getInput('durationQuestion', invalidDuration)) * 12;
-  mtgPayment = getMtgPayment();
+  let principal = Number(getInput('amountQuestion', invalidNum));
+  let monthlyIntRate = (Number(getInput('intQuestion', invalidNum)) / 100) / 12;
+  let durationMonths = Number(getInput('durationQuestion', invalidDuration)) * 12;
+  let mtgPayment = getMtgPayment(durationMonths, principal, monthlyIntRate);
   console.log(`Your monthly mortgage payment is $${mtgPayment.toFixed(2)}.`);
   calcAgain = getInput('againQuestion', invalidCalcAgain).toLowerCase();
 } while (calcAgain === 'y');
