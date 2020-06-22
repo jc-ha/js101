@@ -1,7 +1,7 @@
 const READLINE = require('readline-sync');
 const VALID_CHOICES = ['rock', 'paper', 'scissors'];
 
-function displayWinner(choice, computerChoice) {
+function getWinner(choice, computerChoice) {
   prompt(`You chose ${choice}, computer chose ${computerChoice}.`);
   
   if ((choice === 'rock' && computerChoice === 'scissors') || 
@@ -36,7 +36,7 @@ do {
   let randomIndex = Math.round(Math.random() * (VALID_CHOICES.length - 1));
   let computerChoice = VALID_CHOICES[randomIndex];
 
-  prompt(`${displayWinner(choice, computerChoice)}`);
+  prompt(`${getWinner(choice, computerChoice)}`);
   
   prompt('Do you want to play again (y/n)?');
   playAgain = READLINE.question().toLowerCase();
