@@ -24,4 +24,4 @@ list.forEach(element => {
 }); // why does this stop after 4 elements?
 
 console.log(list); // this shows 5, 6, 7 left in array
-
+// Coding Tips 2 > Don't mutate the caller during iteration
