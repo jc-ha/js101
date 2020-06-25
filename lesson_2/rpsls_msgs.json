@@ -6,7 +6,6 @@
   "sp" : "spock",
   "acronyms" : "'r' for rock, 'p' for paper, 'sc' for scissors, 'l' for lizard, 'sp' for spock",
   "welcome" : "Welcome to Rock Paper Scissors Lizard Spock\nFirst to five wins will be the grand winner\n* * * * *",
-  "validChoices" : "rock, paper, scissors, lizard, spock",
   "playAgain" : "Do you want to play again (y/n)?",
   "invalidChoice" : "That's not a valid choice.",
   "playerWin" : "You are the grand winner!",
