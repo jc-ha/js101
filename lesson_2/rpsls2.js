@@ -1,13 +1,14 @@
+// Define variables and functions
 const READLINE = require('readline-sync');
 const VALID_ACRONYMS = ['r', 'p', 'sc', 'l', 'sp'];
 const MESSAGES = require('./rpsls_msgs.json');
 const SCORE_TO_WIN = 5;
 const WINNING_COMBOS = {
-  r:  ['sc', 'l'],
-  p:  ['r', 'sp'],
-  sc: ['p', 'l'],
-  l:  ['p', 'sp'],
-  sp: ['sc', 'r']
+  rock:  ['scissors', 'lizard'],
+  paper:  ['rock', 'spock'],
+  scissors: ['paper', 'lizard'],
+  lizard:  ['paper', 'spock'],
+  spock: ['scissors', 'rock']
 };
 let playerScore;
 let computerScore;
@@ -20,10 +21,7 @@ function playerWin(player, computer) {
   return WINNING_COMBOS[player].includes(computer);
 }
 
-function tie(player, computer) {
-  return player === computer;
-}
-
+// Start prog
 while (true) {
   console.clear();
   prompt(`${MESSAGES.welcome}`);
@@ -41,19 +39,16 @@ while (true) {
       prompt(`${MESSAGES.invalidChoice}`);
       playerChoice = READLINE.prompt();
     }
-
-
-// Find way to replace acronym with full words
-
-
+    playerChoice = MESSAGES[playerChoice];
 
     let randomIndex = Math.floor(Math.random() * VALID_ACRONYMS.length);
     let computerChoice = VALID_ACRONYMS[randomIndex];
+    computerChoice = MESSAGES[computerChoice];
 
     if (playerWin(playerChoice, computerChoice)) {
       prompt('You win.\n* * * * *');
       playerScore += 1;
-    } else if (tie(playerChoice, computerChoice)) {
+    } else if (playerChoice === computerChoice) {
       prompt('It\'s a tie.\n* * * * *');
     } else {
       prompt('Computer wins.\n* * * * *');
