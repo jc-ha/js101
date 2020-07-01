@@ -99,6 +99,28 @@ Calculate the decimal of the tip rate
 Calculate the tip and assign it to variable
 Add tip to bill amount and log both
 
+# easy1-7
+
+  Problem
+inputs: strings of different length
+output: one string with shorter str sandwiching longer str
+determine the longer of two str
+
+# easy1-8
+
+  Problem
+input: year above 0
+output: boolean
+leap year if:
+  evenly divisible by 4 AND NOT evenly divisible by 100
+    ||
+  evenly divisible by 100 AND 400 -- if it is divisible by 400, 
+  then it is divisible by 100
+  Examples
+2000 
+  Data Structure
+Numbers
+
 
 
 
