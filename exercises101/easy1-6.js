@@ -1,8 +1,7 @@
 // easy1-6.js
 const READLINE = require('readline-sync');
 
-// [1, 2, 3, 4, 5]
-
+/*
 function getSum(num) {
   let total = 0;
   
@@ -11,6 +10,12 @@ function getSum(num) {
   }
   
   return total;
+}
+
+function getSum(arr) {
+  return arr.reduce((acc, currValue) => {
+    acc + currValue;
+  }, 0);
 }
 
 function getProduct(num) {
@@ -44,4 +49,37 @@ if (operation === 's') {
 } else if (operation === 'p') {
   let product = getProduct(input);
   console.log(`The product of the integers between 1 and ${input} is ${product}.`);
+}
+*/
+
+function getSum(arr) {
+  return arr.reduce((acc, currValue) => {
+    return acc + currValue;
+  }, 0);
+}
+
+function getProduct(arr) {
+  return arr.reduce((acc, currValue) => {
+    return acc * currValue;
+  }, 1);
+}
+
+let input = [1, 2, 3, 4, 5, 6];
+//let input = Number(READLINE.question('Please provide an array of numbers: '));
+
+let operation = READLINE.question(
+  'Enter "s" to compute the sum, or "p" to compute the product: '
+  ).toLowerCase();
+
+while (!['s', 'p'].includes(operation)) {
+  operation = READLINE.question('Must enter "s" for sum, or "p" for product: '
+  ).toLowerCase();
+}
+
+if (operation === 's') {
+  let sum = getSum(input);
+  console.log(`The sum of the array elements ${input} is ${sum}.`);
+} else if (operation === 'p') {
+  let product = getProduct(input);
+  console.log(`The product of the array elements ${input} is ${product}.`);
 }
