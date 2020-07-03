@@ -121,38 +121,40 @@ leap year if:
   Data Structure
 Numbers
 
+# easy1-9
 
+  Problem
+input: year above 0
+output: boolean
+different leap year standards - differentiate between before 1752
+and 1752
 
+# easy1-10
 
+  Problem
+input: number
+output: sum
+compute sum of all multiples of 3 and 5 between 1 and number,
+inclusive of 1 and number
+  Examples
+20
+  Data Structure
+Numbers
+  Algorithm
+Count up to number and check for multiples of 3 or 5 on the way up
+Add those numbers to a total as you count up
 
+# easy1-11
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  Problem
+input: string
+output: ASCII string value, which is the sum of the ASCII values
+of every character in the strin
+use charCodeAt() to determine ASCII value of character
+  Examples
+'hello' - sum of the values of the five characters
+  Data Structure
+strings
+  Algorithm
+Loop through the string and determine the ASCII value and add them 
+to a total
