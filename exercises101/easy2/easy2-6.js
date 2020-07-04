@@ -19,4 +19,5 @@ function middleWord(string) {
   }
 }
 
-console.log(middleWord('Let us go to the market tomorrow night k.'));
+console.log(middleWord('Batman'));
+console.log(middleWord('Let us go to the market tomorrow at Chelsea.'));
