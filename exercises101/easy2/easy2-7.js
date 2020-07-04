@@ -28,5 +28,5 @@ console.log(xor1(1, 1) === false);
 console.log(xor1(true, true) === false);
 
 /** The second operand needs to be evaluated because you can only
- * have one truthy value in this function */
+ * have one truthy value in this function so both must be checked */
  
