@@ -8,6 +8,7 @@ function integerToString(integer) {
   do {
     let digits = integer % 10;
     stringDigits.push(DIGITS[digits]);
+    
     integer = (integer - digits) / 10;
   } while (integer > 0);
 
@@ -18,10 +19,10 @@ function integerToString1(integer) {
   let result = '';
 
   do {
-    let digits = integer % 10;
+    let remainder = integer % 10;
     integer = Math.floor(integer / 10);
 
-    result = DIGITS[digits] + result;
+    result = DIGITS[remainder] + result;
   } while (integer > 0);
 
   return result;
