@@ -15,6 +15,7 @@ function integerToString(integer) {
   return result;
 }
 
+// Mine
 function signedIntegerToString1(integer) {
   if (Math.sign(integer) === -1) {
     integer = 0 - integer;
@@ -26,6 +27,7 @@ function signedIntegerToString1(integer) {
   }
 }
 
+// Solution
 function signedIntegerToString2(integer) {
   switch (Math.sign(integer)) {
     case -1:
@@ -37,6 +39,7 @@ function signedIntegerToString2(integer) {
   }
 }
 
+// Another student, this seems best
 function signedIntegerToString(integer) {
   if (integer < 0) return `-${integerToString(-integer)}`;
 
