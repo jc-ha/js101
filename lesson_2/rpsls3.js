@@ -2,7 +2,6 @@
 const READLINE = require('readline-sync');
 const VALID_ACRONYMS = ['r', 'p', 'sc', 'l', 'sp'];
 const MESSAGES = require('./rpsls_msgs.json');
-const SCORE_TO_WIN = 5;
 const WINNING_COMBOS = {
   rock:  ['scissors', 'lizard'],
   paper:  ['rock', 'spock'],
