@@ -26,7 +26,7 @@ function isMatchOver(obj) {
 function retrievePlayerChoice() {
   prompt(`Choose: ${MESSAGES.acronyms}.`);
   let input = READLINE.question().toLowerCase();
-  
+
   while (!VALID_ACRONYMS.includes(input)) {
     prompt(`${MESSAGES.invalidChoice}`);
     input = READLINE.prompt();
@@ -81,7 +81,7 @@ while (true) {
 
     let playerChoice = retrievePlayerChoice();
     let computerChoice = retrieveComputerChoice();
-    
+
     prompt(`You chose ${playerChoice}, Computer chose ${computerChoice}.`);
 
     displayRoundWinner(playerChoice, computerChoice);
