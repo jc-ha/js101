@@ -9,7 +9,7 @@ function isColorValid(color) {
 }
 
 function isColorValid1(color) {
-  return (color === 'blue' || color === 'green');
+  return color === 'blue' || color === 'green';
 }
 
 let isColorValid2 = color => color === 'blue' || color === 'green';
