@@ -9,25 +9,34 @@ console.log(numbers);
 console.log([...numbers].sort((a, b) => b - a));
 console.log(numbers);
 
-// Bonus 1
+// Bonus 1a
 let reversedArr = [];
+
 numbers.forEach((num) => {
   reversedArr[(numbers.length - 1) - numbers.indexOf(num)] = num;
 });
+
 console.log(reversedArr);
 
+// Bonus 1b
 let reversedArr1 = [];
+
 numbers.forEach((num) => {
   reversedArr1.unshift(num);
 });
+
 console.log(reversedArr1);
 
+// Bonus 1c
 let reversedArr2 = [];
+
 numbers.forEach((_, index) => {
   reversedArr2.push(numbers[(numbers.length - 1) - index]);
 });
+
 console.log(reversedArr2);
 
 //Bonus 2
 let reversedArr3 = numbers.reduce((acc, num) => [num, ...acc], []);
+
 console.log(reversedArr3);
